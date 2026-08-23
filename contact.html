@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — PS GROUP SARL</title>
+  <meta name="description" content="Contactez PS GROUP SARL — Petit Marché ODZA, face école Léo. Tél 653 834 302 / 655 934 760." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <span class="logo-main">PS <span>GROUP</span></span>
+        <span class="logo-tag">SARL</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="index.html#entreprises">Nos entreprises</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-outline">Nous contacter</a>
+        <button class="nav-toggle" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h1>Parlons de votre projet</h1>
+      <p>Une question, un projet, une envie de collaboration ? Notre équipe vous répond rapidement.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container grid grid-2">
+      <div>
+        <span class="eyebrow">Coordonnées</span>
+        <h2 style="font-size: 28px; margin-bottom: 24px;">Nos informations de contact</h2>
+        <ul class="contact-info-list">
+          <li>
+            <div class="icon-badge"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <strong>Adresse</strong>
+              <span>Petit Marché ODZA, Face école Léo</span>
+            </div>
+          </li>
+          <li>
+            <div class="icon-badge"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <strong>Téléphone</strong>
+              <span>653 834 302 &middot; 655 934 760</span>
+            </div>
+          </li>
+          <li>
+            <div class="icon-badge"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <strong>Email</strong>
+              <span>infos.pointsolutionsgroup@gmail.com</span>
+            </div>
+          </li>
+          <li>
+            <div class="icon-badge"><i class="fa-solid fa-tv"></i></div>
+            <div>
+              <strong>Média du groupe</strong>
+              <span>Suivez AFRIJEUNE+, notre chaîne en ligne</span>
+            </div>
+          </li>
+        </ul>
+        <div class="footer-social" style="margin-top: 8px;">
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" style="border-color: var(--color-border); color: var(--color-primary);"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" style="border-color: var(--color-border); color: var(--color-primary);"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok" style="border-color: var(--color-border); color: var(--color-primary);"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube" style="border-color: var(--color-border); color: var(--color-primary);"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-bottom: 20px;">Envoyez-nous un message</h3>
+        <!-- Formulaire cote client uniquement : pas de backend branche.
+             A connecter plus tard a un service type Formspree/EmailJS. -->
+        <form class="contact-form" action="mailto:infos.pointsolutionsgroup@gmail.com" method="post" enctype="text/plain">
+          <div class="form-field">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="vous@exemple.com" required />
+          </div>
+          <div class="form-field">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Objet de votre message" />
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Envoyer par email</button>
+          <p class="form-feedback" style="margin-top: 14px; font-size: 14px; color: var(--color-muted);"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo">
+            <span class="logo-main">PS <span>GROUP</span></span>
+            <span class="logo-tag">SARL</span>
+          </a>
+          <p style="margin-top: 16px;">L'innovation au service de vos ambitions. Un groupe, plusieurs expertises.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Nos entreprises</h4>
+          <ul>
+            <li><a href="entreprises/audiovisuel.html">Audiovisuel</a></li>
+            <li><a href="entreprises/infographie.html">Infographie</a></li>
+            <li><a href="entreprises/formation.html">Formation</a></li>
+            <li><a href="entreprises/evenementiel.html">Événementiel</a></li>
+            <li><a href="entreprises/digital.html">Digital</a></li>
+            <li><a href="entreprises/afrijeune-plus.html">Média — AFRIJEUNE+</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Petit Marché ODZA, Face école Léo</li>
+            <li>653 834 302 / 655 934 760</li>
+            <li>infos.pointsolutionsgroup@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 PS GROUP SARL. Tous droits réservés.</span>
+        <span>Site vitrine — contenu à finaliser avec le logo et les textes officiels</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
