@@ -455,7 +455,7 @@ section { padding: 88px 0; }
   color: #fff;
   padding: 56px 0;
 }
-.stats-band .grid-4 { text-align: center; }
+.stats-band .grid-3, .stats-band .grid-4 { text-align: center; }
 .stats-band .stat-num { font-family: var(--font-heading); font-size: 38px; font-weight: 800; color: var(--color-accent); }
 .stats-band .stat-label { margin-top: 6px; font-size: 14px; color: rgba(255, 255, 255, 0.82); }
 
@@ -980,6 +980,12 @@ section { padding: 88px 0; }
   .cta-banner { flex-direction: column; text-align: center; }
   section { padding: 64px 0; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Les bandes de statistiques restent compactes (3-4 colonnes) meme sur mobile */
+  .stats-band .grid-3 { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .stats-band .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 20px 12px; }
+  .stats-band .stat-num { font-size: 28px; }
+  .stats-band .stat-label { font-size: 12px; }
 }
 
 @media (max-width: 480px) {
