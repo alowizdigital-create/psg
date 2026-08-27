@@ -596,6 +596,198 @@ section { padding: 88px 0; }
 .contact-info-list span { color: var(--color-muted); font-size: 14.5px; }
 
 /* ==========================================================================
+   Actualites (grille de news + widget Facebook)
+   ========================================================================== */
+.news-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.news-card {
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(30, 20, 22, 0.14);
+}
+
+.news-card-img { height: 300px; overflow: hidden; }
+.news-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.news-card:hover .news-card-img img { transform: scale(1.06); }
+
+.news-card-body {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.news-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-muted);
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.news-card-body h3 { font-size: 16.5px; line-height: 1.35; }
+.news-card-body p { color: var(--color-muted); font-size: 14px; flex: 1; }
+
+.news-card-link {
+  align-self: flex-start;
+  margin-top: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: var(--color-bg-dark);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: transform 0.2s ease;
+}
+.news-card-link:hover { transform: translateY(-2px); }
+
+.fb-widget-card {
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 18px;
+  position: sticky;
+  top: 96px;
+}
+.fb-widget-card h3 {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+}
+.fb-widget-card .fb-page { width: 100%; }
+
+@media (max-width: 960px) {
+  .news-layout { grid-template-columns: 1fr; }
+  .fb-widget-card { position: static; }
+}
+
+@media (max-width: 600px) {
+  .news-grid { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   Icones musicales (avatar monogramme, sans photo)
+   ========================================================================== */
+.icon-card {
+  text-align: center;
+}
+
+.icon-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  background: linear-gradient(160deg, var(--color-primary), var(--color-bg-dark-2));
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  box-shadow: var(--shadow-card);
+  border: 3px solid var(--color-accent);
+}
+
+.icon-card h3 { font-size: 16px; margin-bottom: 4px; }
+.icon-card p { color: var(--color-muted); font-size: 13.5px; }
+
+.icon-avatar-photo { padding: 0; overflow: hidden; }
+.icon-avatar-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+/* ==========================================================================
+   Cartes artiste (grande photo + informations, meme gabarit que .news-card)
+   ========================================================================== */
+.artist-card {
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.artist-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(30, 20, 22, 0.14);
+}
+
+.artist-card-img { height: 300px; overflow: hidden; }
+.artist-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.4s ease; }
+.artist-card:hover .artist-card-img img { transform: scale(1.06); }
+
+.artist-card-body { padding: 20px 22px 24px; text-align: center; }
+.artist-card-body h3 { font-size: 18px; margin-bottom: 6px; }
+.artist-card-body p { color: var(--color-muted); font-size: 14px; }
+
+@media (max-width: 600px) {
+  .artist-card-img { height: 260px; }
+}
+
+/* ==========================================================================
+   Cartes formation (image + icone + titre + description)
+   ========================================================================== */
+.training-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.training-img {
+  height: 180px;
+  overflow: hidden;
+}
+
+.training-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.training-card:hover .training-img img { transform: scale(1.06); }
+
+.training-body {
+  padding: 26px 24px 28px;
+}
+
+.training-body .icon-badge { margin-bottom: 14px; }
+.training-body h3 { font-size: 18px; margin-bottom: 8px; }
+.training-body p { color: var(--color-muted); font-size: 14.5px; }
+
+/* ==========================================================================
    Lignes de service (titre + texte / image)
    ========================================================================== */
 .service-row {
@@ -808,6 +1000,8 @@ section { padding: 88px 0; }
 @media (max-width: 760px) {
   .showcase-banner { height: 260px; border-radius: var(--radius-md); }
 }
+
+
 
 /* ==========================================================================
    Equipe (photos)
